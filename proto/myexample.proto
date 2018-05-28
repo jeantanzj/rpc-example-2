@@ -1,0 +1,18 @@
+
+syntax = "proto3";
+
+package myexample;
+
+message Request {
+  string a = 1;
+  string b = 2;
+}
+
+message Response {
+  string value = 1;
+}
+
+service Engine {
+  rpc GetResponse(Request) returns (Response) {}
+}
+
